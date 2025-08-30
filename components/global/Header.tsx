@@ -180,7 +180,7 @@ export default function Header() {
               <a href="#contact" onClick={(e) => handleScrollTo(e, "#contact")}>
                 <Button
                   size={"lg"}
-                  className={`${isScrolled ? "bg-primary" : "bg-accent text-primary hover:bg-accent-hover"} hidden md:block rounded-full px-10 hover:bg-primary-hover`}
+                  className={`${isScrolled ? "bg-primary" : "bg-accent text-primary hover:text-white"} hidden md:block rounded-full px-10 hover:bg-primary-hover`}
                 >
                   Get in Touch
                 </Button>
