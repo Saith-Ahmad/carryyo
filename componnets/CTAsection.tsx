@@ -1,42 +1,19 @@
-"use client";
+import React from 'react'
 
-import { motion } from "framer-motion";
-import Image from "next/image";
-
-export default function CTASection() {
+function CTAsection() {
   return (
-    <section className="w-full flex justify-center py-16 px-3 bg-white"id="contact">
-      <div className="max-w-6xl w-full bg-primary text-white rounded-2xl shadow-lg  p-7 md:p-10 grid md:grid-cols-2 items-center gap-8">
-        {/* Left Content */}
-        <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold leading-snug">
-            Ensure Your Facility is Safe & <span className="text-accent">Fully Compliant</span>
-          </h2>
-          <p className="text-base md:text-lg text-gray-200">
-            Don't compromise on safety. Schedule your professional boiler inspection with our certified experts to ensure optimal performance and complete peace of mind.
-          </p>
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 2, ease: "linear" }}
-            viewport={{ once: true }}
-            className="bg-accent text-primary px-10 py-3 rounded-full font-medium text-lg hover:opacity-90 transition hover:bg-accent-hover">
-            Get In Touch
-          </motion.button>
+    <div className='p-5'>
+      <div className='relative inset-x-0 bg-secondary border-yellow-200 md:min-h-[100vh] min-h-[70vh] w-full rounded-4xl flex flex-col justify-center items-center p-5 '>
+        <div className='flex flex-col gap-3'>
+          <img src={'/asset/quote.png'} alt='quote' className='self-start' />
+          <p className='text-white md:text-5xl text-3xl  max-w-4xl text-center leading-normal'>From spare luggage to shared love. Every journey has space to carry connections</p>
+          <img src={'/asset/quote.png'} alt='quote' className='self-end' />
         </div>
 
-        {/* Right Image */}
-        <div className="flex justify-center">
-          <Image
-            src="/assets/cta1.png"
-            alt="Boiler Inspection"
-            width={400}
-            height={600}
-            className="rounded-xl object-contain"
-            unoptimized
-          />
-        </div>
+         <img src={'/asset/quotebg.png'} alt='quote' className='absolute bottom-0 w-full' />
       </div>
-    </section>
-  );
+    </div>
+  )
 }
+
+export default CTAsection

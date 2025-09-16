@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 
-function Hero() {
+function HeroMob() {
   useEffect(() => {
     const buttons = gsap.utils.toArray<HTMLElement>(".float-btn");
 
@@ -44,16 +44,16 @@ function Hero() {
 
       {/* Left div */}
       <>
-        <Button className="absolute float-btn bg-[#777E9D] hover:bg-[#6e77a1] hover:scale-[1.03] transition-all duration-300 rounded-full top-[20%] left-[10%] px-10">
+        <Button className="absolute float-btn bg-[#777E9D] hover:bg-[#6e77a1] hover:scale-[1.03] transition-all duration-300 rounded-full top-[16%] left-[5%] px-10">
           + Paris
         </Button>
-        <Button className="absolute float-btn bg-[#FCD6CA] hover:bg-[#fdc2b0] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[35%] left-[15%] px-10">
+        <Button className="absolute float-btn bg-[#FCD6CA] hover:bg-[#fdc2b0] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[255] left-[25%] px-10">
           + Amsterdam
         </Button>
-        <Button className="absolute float-btn bg-[#FFEBE4] hover:bg-[#fde5dc] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[50%] left-[7%] px-10">
+        <Button className="absolute float-btn bg-[#FFEBE4] hover:bg-[#fde5dc] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[22%] left-[3%] px-10">
           + Riyadh
         </Button>
-        <Button className="absolute float-btn bg-[#7B8DAE] hover:bg-[#6f84ac] hover:scale-[1.03] transition-all duration-300 text-white rounded-full top-[65%] left-[15%] px-10">
+        <Button className="absolute float-btn bg-[#7B8DAE] hover:bg-[#6f84ac] hover:scale-[1.03] transition-all duration-300 text-white rounded-full bottom-[25%] left-[5%] px-10">
           + Barcelona
         </Button>
         <Button className="absolute float-btn bg-[#F7A487] hover:bg-[#fc9975] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[80%] left-[10%] px-10">
@@ -63,26 +63,26 @@ function Hero() {
 
       {/* Right div */}
       <>
-        <Button className="absolute float-btn bg-[#777E9D] hover:bg-[#6e77a1] hover:scale-[1.03] transition-all duration-300 rounded-full top-[20%] right-[10%] px-10">
+        <Button className="absolute float-btn bg-[#777E9D] hover:bg-[#6e77a1] hover:scale-[1.03] transition-all duration-300 rounded-full top-[16%] right-[10%] px-10">
           + London
         </Button>
-        <Button className="absolute float-btn bg-[#FCD6CA] hover:bg-[#fdc2b0] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[35%] right-[15%] px-10">
+        <Button className="absolute float-btn bg-[#FCD6CA] hover:bg-[#fdc2b0] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[22%] right-[5%] px-10">
           + NewYork
         </Button>
-        <Button className="absolute float-btn bg-[#FFEBE4] hover:bg-[#fde5dc] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[50%] right-[7%] px-10">
+        <Button className="absolute float-btn bg-[#FFEBE4] hover:bg-[#fde5dc] hover:scale-[1.03] transition-all duration-300 text-black rounded-full bottom-[22%] right-[7%] px-10">
           + Islamabad
         </Button>
-        <Button className="absolute float-btn bg-[#7B8DAE] hover:bg-[#6f84ac] hover:scale-[1.03] transition-all duration-300 text-white rounded-full top-[65%] right-[15%] px-10">
+        <Button className="absolute float-btn bg-[#7B8DAE] hover:bg-[#6f84ac] hover:scale-[1.03] transition-all duration-300 text-white rounded-full bottom-[8%] right-[35%] px-10">
           + Melbourne
         </Button>
-        <Button className="absolute float-btn bg-[#F7A487] hover:bg-[#fc9975] hover:scale-[1.03] transition-all duration-300 text-black rounded-full top-[80%] right-[10%] px-10">
+        <Button className="absolute float-btn bg-[#F7A487] hover:bg-[#fc9975] hover:scale-[1.03] transition-all duration-300 text-black rounded-full bottom-[13%] right-[15%] px-10">
           + Dubai
         </Button>
       </>
 
       {/* Text content */}
       <div className="max-w-5xl relative z-10 flex flex-col justify-center items-center gap-4">
-        <h1 className="text-5xl font-bold md:text-7xl text-primary text-center leading-[1.1]">
+        <h1 className="text-4xl font-bold md:text-7xl text-primary text-center leading-[1.1]">
           Delivery Powered <br />
           by <span className="text-white">people</span>
         </h1>
@@ -97,4 +97,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default HeroMob;

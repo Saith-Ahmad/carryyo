@@ -115,10 +115,16 @@ html {
 /* 🌈 BRAND PALETTE */
 /* ----------------- */
 :root {
-  --primary: #0A1F44;
-  --primary-hover: #0D285C;
+  --primary: #F46035;
+  --primary1: #F7A487;
+  --primary2: #FCD6CA;
+  --primary3: #FFEBE4;
+  --primary-hover: #e74f21;
 
-  --secondary: #1E3A8A;
+  --secondary: #001437;
+  --secondary1: #0A2A62;
+  --secondary2: #7B8DAE;
+  --secondary3: #777E9D;
   --secondary-hover: #2D4FB3;
 
   --accent: #F4B400;
@@ -286,3 +292,63 @@ html {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 0.8s ease-out forwards;
+}
+
+
+.delay-0 {
+  animation-delay: 0s;
+}
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+}
+.delay-4 {
+  animation-delay: 0.8s;
+}
+

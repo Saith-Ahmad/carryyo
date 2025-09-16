@@ -1,20 +1,21 @@
 import CTASection from '@/componnets/CTAsection'
+import FutureOfDelivery from '@/componnets/FutureOfDelivery'
 import Hero from '@/componnets/Hero'
-import Safety from '@/componnets/Safety'
-import Services from '@/componnets/Services'
-import TestimonialsSection from '@/componnets/Testimonials'
-import VisionMission from '@/componnets/VisionMission'
+import HeroMob from '@/componnets/HeroMob'
+import MovingForward from '@/componnets/MovingForward'
+import CaseStudies from '@/componnets/Slider'
+import { Sliders } from 'lucide-react'
 import React from 'react'
 
 export default function page() {
   return (
     <div className=''>
-      <Hero/>
-      <Services/>
-      <Safety/>
-      <VisionMission/>
-      <TestimonialsSection/>
+      <div className='hidden md:flex'><Hero/></div>
+      <div className='flex md:hidden'><HeroMob/></div>
+      <CaseStudies/>
       <CTASection/>
+      <MovingForward/>
+      <FutureOfDelivery/>
     </div>
   )
 }

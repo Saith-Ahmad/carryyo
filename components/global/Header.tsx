@@ -115,12 +115,12 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-2 w-full z-50 bg-transparent">
+    <header className="fixed w-full z-50 bg-transparent">
       <div className="w-full flex justify-center">
         <div
-          className={`w-[90%] md:w-[80%] rounded-full shadow-lg transition-all backdrop-blur-2xl duration-300 ${
+          className={`w-full  shadow-lg transition-all backdrop-blur-2xl duration-300 ${
             isScrolled
-              ? "bg-[#ffffffb9] md:w-[88%] w-[95%]"
+              ? "bg-[#ffffffb9] "
               : "bg-[#ffffff25] backdrop-blur-xl"
           }`}
         >
@@ -129,12 +129,12 @@ export default function Header() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="flex items-center justify-between py-1 px-4 md:px-5"
+            className="flex items-center container justify-between py-3"
           >
             {/* Logo */}
             <motion.div variants={item}>
-              <a href="#home" className="text-2xl font-bold text-accent flex flex-row items-center gap-2">
-                <img src={`${isScrolled ? "/assets/logo2.png" : "/assets/logo1.png"}`} alt="logo" className="w-14 md:w-16"/>
+              <a href="#home" className="text-2xl font-bold text-primary flex flex-row items-center gap-2">
+                <img src={`${isScrolled ? "/asset/logo1.png" : "/asset/logo.png"}`} alt="logo" className="w-28 md:w-28"/>
               </a>
             </motion.div>
 
@@ -144,7 +144,6 @@ export default function Header() {
               className="hidden md:flex gap-8 text-gray-600"
             >
               {menuItems.map((itemData) => {
-                const Icon = itemData.icon;
                 const isActive = activeSection === itemData.href;
                 return (
                   <motion.div key={itemData.label} variants={item}>
@@ -153,22 +152,12 @@ export default function Header() {
                       onClick={(e) => handleScrollTo(e, itemData.href)}
                       className={`flex flex-col items-center gap-1 transition ${
                         isActive
-                          ? "text-accent"
+                          ? "text-primary"
                           : `${!isScrolled ? "text-gray-200 hover:text-white" : "text-gray-500 hover:text-primary"} hover:scale-[1.02]`
                       }`}
                     >
-                      <Icon
-                        size={16}
-                        className={`transition ${
-                          isActive
-                            ? "text-accent"
-                            : `${!isScrolled ? "text-gray-200 hover:text-accent" : "hover:text-primary-hover text-primary hover:fill-primary-hover"}`
-                        }`}
-                      />
+                     
                       <span>{itemData.label}</span>
-                      <span className="text-[10px] hidden 2xl:flex -mt-2 capitalize">
-                        {itemData.desc}
-                      </span>
                     </a>
                   </motion.div>
                 );
@@ -180,9 +169,9 @@ export default function Header() {
               <a href="#contact" onClick={(e) => handleScrollTo(e, "#contact")}>
                 <Button
                   size={"lg"}
-                  className={`${isScrolled ? "bg-primary" : "bg-accent text-primary hover:text-white"} hidden md:block rounded-full px-10 hover:bg-primary-hover`}
+                  className={`${isScrolled ? "bg-primary" : "bg-primary text-white hover:text-white"} hidden md:block rounded-lg px-10 hover:bg-primary-hover`}
                 >
-                  Get in Touch
+                  Join Waitlist
                 </Button>
               </a>
             </motion.div>
@@ -191,7 +180,7 @@ export default function Header() {
             <div className="md:hidden">
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>
-                  <Button size="icon" className={`text-white hover:bg-accent ${!isScrolled && "bg-accent text-primary"}`}>
+                  <Button size="icon" className={`text-white hover:bg-primary ${!isScrolled && "bg-accent text-primary"}`}>
                     <Menu size={30} />
                   </Button>
                 </SheetTrigger>
@@ -202,7 +191,6 @@ export default function Header() {
                     {/* Mobile Nav */}
                     <nav className="flex flex-col gap-4">
                       {menuItems.map((itemData) => {
-                        const Icon = itemData.icon;
                         const isActive = activeSection === itemData.href;
                         return (
                           <a
@@ -211,18 +199,11 @@ export default function Header() {
                             onClick={(e) => handleMobileLinkClick(e, itemData.href)}
                             className={`flex items-center gap-3 transition ${
                               isActive
-                                ? "text-accent"
+                                ? "text-primary"
                                 : "text-gray-600 hover:text-primary"
                             }`}
                           >
-                            <Icon
-                              size={20}
-                              className={`transition ${
-                                isActive
-                                  ? "text-accent fill-accent"
-                                  : "hover:text-primary-hover text-primary fill-primary hover:fill-primary-hover"
-                              }`}
-                            />
+                           
                             {itemData.label}
                           </a>
                         );

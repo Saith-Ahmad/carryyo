@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
 import LenisProvider from "@/components/global/LenisProvider";
+
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
@@ -31,12 +32,12 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} ${merriweather.variable} antialiased`}
       >
-        <LenisProvider>
+        {/* <LenisProvider> */}
 
         <Header />
         {children}
         <Footer/>
-        </LenisProvider>
+        {/* </LenisProvider> */}
       </body>
     </html>
   );
