@@ -8,7 +8,7 @@ function FutureOfDelivery() {
                 THE FUTURE OF <span className='text-primary'>DELIVERY</span>
             </h2>
 
-            <div className='flex flex-col justify-center max-w-5xl items-center my-10 mt-20 gap-6 mx-auto'>
+            <div className='flex flex-col justify-center max-w-4xl items-center my-10 mt-20 gap-6 mx-auto'>
 
 
                 <div className='flex flex-col-reverse md:flex-row justify-between gap-4'>
